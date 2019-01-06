@@ -35,16 +35,16 @@ passport.use(
     })   
 )
 
-passport.use(
-    new FacebookStrategy({
-        clientID: keys.facebookClientID,
-        clientSecret: keys.facebookClientSecret,
-        callbackURL: '/aut/facebook/callback',
-        proxy: true,
-        enableProof: true
-    }, (accessToken, refreshToken, profile, done) => {
-        console.log(accessToken)
-        console.log(refreshToken)
-        console.log(profile)
-    })
-)
+// passport.use(
+//     new FacebookStrategy({
+//         clientID: keys.facebookClientID,
+//         clientSecret: keys.facebookClientSecret,
+//         callbackURL: '/aut/facebook/callback',
+//         proxy: true,
+//         enableProof: true
+//     }, (accessToken, refreshToken, profile, done) => {
+//         console.log(accessToken)
+//         console.log(refreshToken)
+//         console.log(profile)
+//     })
+// )
