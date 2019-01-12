@@ -9,6 +9,9 @@ import reducers from './reducers'
 
 import App from './components/App'
 
+import axios from 'axios'
+window.axios = axios;
+
 const store = createStore( reducers, {}, applyMiddleware(reduxThunk))
 
 ReactDOM.render(
@@ -17,6 +20,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')  
 )
-
-console.log('STRIPE KEY: ', process.env.REACT_APP_STRIPE_KEY)
-console.log('Env is: ', process.env.NODE_ENV)
